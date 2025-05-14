@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import "aos/dist/aos.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -51,13 +52,13 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
+  --primary: oklch(0.6 0.25 25); 
   --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
+  --secondary: oklch(0.75 0.2 180); /* Bright turquoise */
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
+  --accent: oklch(0.85 0.2 80); /* Sunny yellow */
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.922 0 0);
@@ -85,13 +86,13 @@
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
+  --primary: oklch(0.7 0.25 25); /* Brighter coral red for dark mode */
   --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
+  --secondary: oklch(0.8 0.2 180); /* Brighter turquoise for dark mode */
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.269 0 0);
   --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
+  --accent: oklch(0.9 0.2 80); /* Brighter yellow for dark mode */
   --accent-foreground: oklch(0.985 0 0);
   --destructive: oklch(0.704 0.191 22.216);
   --border: oklch(1 0 0 / 10%);
@@ -119,4 +120,36 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Custom gradient backgrounds */
+.bg-gradient-primary {
+  background: linear-gradient(
+    to right bottom,
+    oklch(0.6 0.25 25),
+    oklch(0.75 0.2 180)
+  );
+}
+
+.dark .bg-gradient-primary {
+  background: linear-gradient(
+    to right bottom,
+    oklch(0.7 0.25 25),
+    oklch(0.8 0.2 180)
+  );
+}
+
+/* Task item styles */
+.task-item {
+  transition: all 0.3s ease;
+}
+
+.task-item-completed {
+  border-left-color: oklch(0.7 0.2 140) !important;
+  background-color: oklch(0.95 0.05 140 / 0.1);
+}
+
+.dark .task-item-completed {
+  border-left-color: oklch(0.7 0.2 140) !important;
+  background-color: oklch(0.7 0.2 140 / 0.1);
 }

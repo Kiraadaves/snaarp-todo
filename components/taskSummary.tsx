@@ -2,7 +2,7 @@
 
 import { Card } from "@/components/ui/card";
 import { useGetTasks } from "@/hooks/useTasks";
-import { CheckCircle, Circle, ListTodo } from "lucide-react";
+import { CheckCircle, CircleDot, ListTodo } from "lucide-react";
 
 export default function TaskSummary() {
   const { allTasks } = useGetTasks("all");
@@ -15,23 +15,38 @@ export default function TaskSummary() {
 
   return (
     <Card
-      className="mt-6 p-4 bg-muted/30 flex justify-between items-center text-sm"
+      className="mt-6 p-6 bg-muted/30 flex justify-between text-sm"
       data-aos="fade-up"
       data-aos-delay="300"
     >
-      <div className="flex items-center gap-2">
-        <ListTodo className="h-4 w-4 text-primary" />
-        <span>Total: {totalTasks}</span>
-      </div>
+      <h2 className="text-center font-medium text-destructive md:text-xl">Summary</h2>
+      <div className="flex justify-between">
+        <div className="flex items-center gap-2">
+          <ListTodo className="h-4 w-4 text-primary" />
+          <p className="text-sm md:text-lg">
+            <span className="hidden md:inline font-bold">Total:</span>{" "}
+            <span className="text-black md:text-[#fa0b4b]">{totalTasks}</span>
+          </p>
+        </div>
 
-      <div className="flex items-center gap-2">
-        <Circle className="h-4 w-4 text-primary" />
-        <span>Active: {activeTasks}</span>
-      </div>
+              <div className="flex items-center gap-2">
+                  
+          <CircleDot className="h-4 w-4 text-primary" />
+          <p className="text-sm md:text-lg ">
+            <span className="hidden md:inline font-bold">Active:</span>{" "}
+            <span className="text-black md:text-yellow-500">{activeTasks}</span>
+          </p>
+        </div>
 
-      <div className="flex items-center gap-2">
-        <CheckCircle className="h-4 w-4 text-green-600" />
-        <span>Completed: {completedTasks}</span>
+        <div className="flex items-center gap-2">
+          <CheckCircle className="h-4 w-4 text-green-600" />
+          <p className="text-sm md:text-lg">
+            <span className="hidden md:inline font-bold">Completed:</span>{" "}
+            <span className="text-black md:text-green-600">
+              {completedTasks}
+            </span>
+          </p>
+        </div>
       </div>
     </Card>
   );
