@@ -17,7 +17,7 @@ export default function TaskList({ tasks, filter }: TaskListProps) {
     active:
       "You currently have no Active tasks. Add some tasks to get started!😊",
     completed:
-      "You currently have no Completed tasks. Add some tasks to get started!😊",
+      "Oops🫢! You currently have no Completed tasks. Complete the active tasks to see your completed tasks. You've got this!💪",
   };
 
   if (tasks.length === 0) {
