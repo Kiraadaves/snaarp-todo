@@ -11,7 +11,7 @@
 
 ## Features
 - Add tasks by inputing a task in the form field and submitting
-- View tasks with dates
+- View tasks with dates and time created
 - Edit tasks
 - Delete tasks
 - Mark task as completed
@@ -22,6 +22,15 @@
 - Display task summary (all tasks, active tasks and completed tasks)
 - Responsive design
 - Animation using AOS
+
+
+## Deployed App on Vercel
+
+You can view this app here: [Todo-App](https://snaarp-todo-oxi5b6kx4-kiraadaves-projects.vercel.app/) 
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## More Information
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
@@ -54,8 +63,3 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
