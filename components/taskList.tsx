@@ -1,16 +1,24 @@
 "use client";
 
-import type { Task } from "@/types/task";
+import type { Task, TaskFilter } from "@/types/task";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 import { Card } from "@/components/ui/card";
 import TaskItems from "./taskItems";
 
 interface TaskListProps {
   tasks: Task[];
+  filter: TaskFilter;
 }
 
-export default function TaskList({ tasks }: TaskListProps) {
+export default function TaskList({ tasks, filter }: TaskListProps) {
   const [parent] = useAutoAnimate();
+  const emptyMessages = {
+    all: "You currently have no tasks. Add some tasks to get started!😊",
+    active:
+      "You currently have no Active tasks. Add some tasks to get started!😊",
+    completed:
+      "You currently have no Completed tasks. Add some tasks to get started!😊",
+  };
 
   if (tasks.length === 0) {
     return (
@@ -19,7 +27,7 @@ export default function TaskList({ tasks }: TaskListProps) {
         data-aos="fade-up"
         data-aos-delay="300"
       >
-        You currently have no tasks. Add some tasks to get started!😊
+        {emptyMessages[filter]}{" "}
       </Card>
     );
   }

@@ -60,13 +60,13 @@ export default function TodoApp() {
 
             <div ref={parent}>
               <TabsContent value="all" className="mt-0">
-                <TaskList tasks={tasks} />
+                <TaskList tasks={tasks} filter="all" />
               </TabsContent>
               <TabsContent value="active" className="mt-0">
-                <TaskList tasks={tasks} />
+                <TaskList tasks={tasks} filter="active" />
               </TabsContent>
               <TabsContent value="completed" className="mt-0">
-                <TaskList tasks={tasks} />
+                <TaskList tasks={tasks} filter="completed" />
               </TabsContent>
             </div>
           </Tabs>

@@ -11,15 +11,15 @@ export default function TaskSummary() {
   const completedTasks = allTasks.filter((task) => task.completed).length;
   const activeTasks = totalTasks - completedTasks;
 
-  if (totalTasks === 0) return null;
-
   return (
     <Card
       className="mt-6 p-6 bg-muted/30 flex justify-between text-sm"
       data-aos="fade-up"
       data-aos-delay="300"
     >
-      <h2 className="text-center font-medium text-destructive md:text-xl">Summary</h2>
+      <h2 className="text-center font-medium text-destructive md:text-xl">
+        Summary
+      </h2>
       <div className="flex justify-between">
         <div className="flex items-center gap-2">
           <ListTodo className="h-4 w-4 text-primary" />
@@ -29,8 +29,7 @@ export default function TaskSummary() {
           </p>
         </div>
 
-              <div className="flex items-center gap-2">
-                  
+        <div className="flex items-center gap-2">
           <CircleDot className="h-4 w-4 text-primary" />
           <p className="text-sm md:text-lg ">
             <span className="hidden md:inline font-bold">Active:</span>{" "}
