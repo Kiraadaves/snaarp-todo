@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import { Card } from "@/components/ui/card"
-import { useGetTasks } from "@/hooks/useTasks"
-import { CheckCircle, Circle, ListTodo } from "lucide-react"
+import { Card } from "@/components/ui/card";
+import { useGetTasks } from "@/hooks/useTasks";
+import { CheckCircle, Circle, ListTodo } from "lucide-react";
 
-export default function TodoSummary() {
-  const { allTasks } = useGetTasks("all")
+export default function TaskSummary() {
+  const { allTasks } = useGetTasks("all");
 
-  const totalTasks = allTasks.length
-  const completedTasks = allTasks.filter((task) => task.completed).length
-  const activeTasks = totalTasks - completedTasks
+  const totalTasks = allTasks.length;
+  const completedTasks = allTasks.filter((task) => task.completed).length;
+  const activeTasks = totalTasks - completedTasks;
 
-  if (totalTasks === 0) return null
+  if (totalTasks === 0) return null;
 
   return (
     <Card
@@ -34,5 +34,5 @@ export default function TodoSummary() {
         <span>Completed: {completedTasks}</span>
       </div>
     </Card>
-  )
+  );
 }
