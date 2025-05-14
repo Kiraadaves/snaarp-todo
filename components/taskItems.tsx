@@ -68,7 +68,7 @@ export default function TaskItems({ task }: TodoItemProps) {
         />
 
         {isEditing ? (
-          <div className="flex-1 flex gap-2">
+          <div className="flex-1 flex gap-2 ml-2">
             <Input
               value={editedTitle}
               onChange={(e) => setEditedTitle(e.target.value)}

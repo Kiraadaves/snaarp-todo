@@ -36,6 +36,7 @@ export const useGetTasks = (filter: TaskFilter = "all") => {
 
   return { tasks, allTasks };
 };
+
 export const useAddTask = () => {
   const queryClient = useQueryClient();
 
@@ -51,7 +52,7 @@ export const useAddTask = () => {
 
       const updatedTasks = [...tasks, newTask];
       saveTasks(updatedTasks);
-      return Promise.resolve(newTask); // Return a Promise
+      return Promise.resolve(newTask); 
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["tasks"] });
@@ -72,7 +73,7 @@ export const useUpdateTask = () => {
       );
 
       saveTasks(updatedTasks);
-      return Promise.resolve(updatedTask); // Return a Promise
+      return Promise.resolve(updatedTask); 
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["tasks"] });
@@ -91,7 +92,7 @@ export const useDeleteTask = () => {
       const updatedTasks = tasks.filter((task) => task.id !== taskId);
 
       saveTasks(updatedTasks);
-      return Promise.resolve(taskId); // Return a Promise
+      return Promise.resolve(taskId); 
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["tasks"] });
