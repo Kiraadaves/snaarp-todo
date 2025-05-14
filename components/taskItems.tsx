@@ -9,12 +9,13 @@ import { Card } from "@/components/ui/card";
 import { Trash, Edit, Save, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useDeleteTask, useUpdateTask } from "@/hooks/useTasks";
+import { formatDateTime } from "@/helpers/dateConverter";
 
-interface TodoItemProps {
+interface TaskItemProps {
   task: Task;
 }
 
-export default function TaskItems({ task }: TodoItemProps) {
+export default function TaskItems({ task }: TaskItemProps) {
   const [isEditing, setIsEditing] = useState(false);
   const [editedTitle, setEditedTitle] = useState(task.title);
 
@@ -60,6 +61,7 @@ export default function TaskItems({ task }: TodoItemProps) {
           : "border-l-primary bg-white dark:bg-gray-800"
       )}
     >
+      <h3 className="text-sm text-gray-700">{formatDateTime(task.createdAt)}</h3>
       <div className="flex justify-between items-center">
         <Checkbox
           checked={task.completed}

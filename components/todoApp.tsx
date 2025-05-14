@@ -8,8 +8,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import type { TaskFilter } from "@/types/task";
 import TaskForm from "./form";
 import { useGetTasks } from "@/hooks/useTasks";
-import TaskList from "./taskList";
+
 import TaskSummary from "./taskSummary";
+import TaskList from "./taskList";
 
 export default function TodoApp() {
   const [filter, setFilter] = useState<TaskFilter>("all");

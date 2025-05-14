@@ -5,11 +5,11 @@ import { useAutoAnimate } from "@formkit/auto-animate/react";
 import { Card } from "@/components/ui/card";
 import TaskItems from "./taskItems";
 
-interface TodoListProps {
+interface TaskListProps {
   tasks: Task[];
 }
 
-export default function TodoList({ tasks }: TodoListProps) {
+export default function TaskList({ tasks }: TaskListProps) {
   const [parent] = useAutoAnimate();
 
   if (tasks.length === 0) {
