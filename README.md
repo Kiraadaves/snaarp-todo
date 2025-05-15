@@ -18,7 +18,7 @@
 - Filter tasks by: All, Active and completed
 - localStorage to simulate backend storage
 - React Query to handle CRUD operations
-- ShadCN components
+- ShadCN components (card, tabs, button, input, checkbox)
 - Display task summary (all tasks, active tasks and completed tasks)
 - Responsive design
 - Animation using AOS

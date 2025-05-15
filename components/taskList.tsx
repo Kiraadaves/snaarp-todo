@@ -37,7 +37,7 @@ export default function TaskList({ tasks, filter }: TaskListProps) {
       {tasks.map((task, index) => (
         <li
           key={task.id}
-          data-aos="fade-right"
+          data-aos="fade-up"
           data-aos-delay={100 + index * 50}
         >
           <TaskItems task={task} />
