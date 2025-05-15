@@ -1,4 +1,5 @@
 ## Snaarp Evaluation: To do App
+This is a simple to-do application utilizing localStorage for backend storage. All CRUD operations are managed through React Query, implemented with custom hooks for efficient state and data handling
 
 ## Tools and Libraries used
 - React/NextJS 15 (App router)
@@ -35,7 +36,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+## Setup Instructions
 
 First, run the development server:
 
