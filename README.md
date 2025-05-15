@@ -26,7 +26,7 @@
 
 ## Deployed App on Vercel
 
-You can view this app here: [Todo-App](https://snaarp-todo-oxi5b6kx4-kiraadaves-projects.vercel.app/) 
+You can view this app here: [Todo-App](https://snaarp-todo.vercel.app/) 
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
