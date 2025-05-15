@@ -27,7 +27,7 @@ export default function Home() {
 
         <footer className="mt-auto bg-white/20 py-4 dark:bg-black/20">
           <div className="container mx-auto px-4 text-center">
-            <p className="text-sm text-black font-medium  dark:text-gray-400">
+            <p className="text-sm text-[#de0640] font-medium  dark:text-gray-400">
               © 2025 Chinwe Nwankwo. All rights reserved.
             </p>
           </div>

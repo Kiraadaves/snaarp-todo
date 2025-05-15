@@ -30,7 +30,7 @@ export default function TaskForm() {
         placeholder="Add a new task...✍️"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
-        className="flex-1 border h-12 border-primary/20 focus-visible:ring-primary"
+        className="flex-1 border h-12 border-primary/20 focus-visible:ring-primary placeholder:text-sm placeholder:md:text-base"
       />
       <Button
         type="submit"

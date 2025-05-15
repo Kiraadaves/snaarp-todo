@@ -10,11 +10,12 @@
 - AOS for animations
 
 ## Features
-- Add tasks by inputing a task in the form field and submitting
+- Add tasks by inputing a task title in the form field and submitting with a submit button
+- Each task has an id generated with uuidv4, a title, a completed status and a created at fields.
 - View tasks with dates and time created
 - Edit tasks
 - Delete tasks
-- Mark task as completed
+- Mark task as completed via checkbox
 - Filter tasks by: All, Active and completed
 - localStorage to simulate backend storage
 - React Query to handle CRUD operations

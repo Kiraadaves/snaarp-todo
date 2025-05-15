@@ -61,7 +61,9 @@ export default function TaskItems({ task }: TaskItemProps) {
           : "border-l-primary bg-white dark:bg-gray-800"
       )}
     >
-      <h3 className="text-sm text-gray-700">{formatDateTime(task.createdAt)}</h3>
+      <h3 className="text-xs md:text-sm text-gray-700">
+        {formatDateTime(task.createdAt)}
+      </h3>
       <div className="flex justify-between items-center">
         <Checkbox
           checked={task.completed}
@@ -98,7 +100,7 @@ export default function TaskItems({ task }: TaskItemProps) {
           <>
             <span
               className={cn(
-                "flex-1 text-lg transition-all duration-300 ml-4",
+                "flex-1 md:text-lg transition-all duration-300 ml-4",
                 task.completed && "line-through text-muted-foreground"
               )}
             >
